@@ -65,11 +65,11 @@ const mobileMenuVariant = {
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => {
-    setNav(!nav)
+    setNav(!nav)    
 
-    if (typeof window != 'undefined' && window.document) {
+    if (!nav) {
       document.body.style.overflow = 'hidden';
-    } else {
+    } else{
       document.body.style.overflow = 'unset';
     }
   };
