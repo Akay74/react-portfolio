@@ -54,7 +54,7 @@ const Resume = () => {
   return (
     <div name='resume' className='w-full h-auto bg-[#0a192f] text-gray-300 my-8'>
       {/* Container */}
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+      <div className='max-w-[1000px] mx-auto py-4 flex flex-col justify-center w-full h-full'>
         <motion.div className='text-left pb-5'
         variants={titleVariant}
         initial="hidden"
@@ -69,16 +69,15 @@ const Resume = () => {
           <p className='text-lg md:text-2l mt-12'>
             Click the button below to download my resume
           </p>
+        </div>
 
-          <div className='mt-12 border border-[#a1967a]/[0.6] bg-[#a1967a]/[0.6] w-48 text-center px-2 py-4 text-lg md:text-xl hover:bg-[#a1967a] hover:border-[#a1967a] cursor-pointer hover:text-[#fff]'>
+        <div className='mt-12 border border-[#a1967a]/[0.6] bg-[#a1967a]/[0.6] w-48 text-center px-2 py-4 text-lg md:text-xl hover:bg-[#a1967a] hover:border-[#a1967a] cursor-pointer hover:text-[#fff]'>
             <a
               href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target='_blank'
               download
             >
               Download Resume
             </a>
-          </div>
-
         </div>
 
       </div>

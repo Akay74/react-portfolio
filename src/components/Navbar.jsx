@@ -54,7 +54,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className='sticky top-0 w-full h-[100px] flex justify-between items-center px-8 bg-[#0a192f]/[0.9] text-gray-300 font-bold'>
+    <div className='sticky top-0 w-full h-[100px] flex justify-between items-center px-8 bg-[#0a192f]/[0.9] text-gray-300 text-lg'>
       <div>
         <span className='text-2xl font-Rochester text-[#ffffff]'>ANTHONY</span>
       </div>
