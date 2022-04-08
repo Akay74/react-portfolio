@@ -51,7 +51,7 @@ const contentVariant = {
 
 const Resume = () => {
   return (
-    <div name='resume' className='w-full h-auto bg-[#0a192f] text-gray-300 my-8'>
+    <div name='resume' className='w-full h-auto bg-[#0a192f] text-gray-300 my-8 p-4 md:p-0'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto py-4 flex flex-col justify-center w-full h-full'>
         <motion.div className='text-left pb-5'

@@ -69,15 +69,12 @@ const heroIntroVariant = {
 
 const viewProjectsVariants = {
   hidden: {
-    x: '-55vw',
     opacity: 0
   },
   visible: {
-    x: 0,
     opacity: 1,
     transition: {
-      type: 'spring',
-      stiffness: 120,
+      duration: 0.5,
       delay: 2.8
     }
   }
@@ -118,14 +115,18 @@ const Home = () => {
           I create solutions that enable strides in business and iterating on already defined pathways to 
           attain desired results while ensuring plausible experiences on both ends of delivery.
         </motion.p>
-        <p className='text-[#dfdfe8] py-4 max-w-[700px] leading-8 text-lg'>
+        <motion.p className='text-[#dfdfe8] py-4 max-w-[700px] leading-8 text-lg mt-2'
+        variants={viewProjectsVariants}
+        initial="hidden"
+        animate="visible"
+        >
           You can check out my some of my
           <span className='text-[#a1967a] cursor-pointer'>
             <Link to='projects' smooth={true} duration={500} className=''> projects </Link>
           </span>
           or view my 
           <span className='text-[#a1967a] cursor-pointer'><Link to='resume' smooth={true} duration={500} > resume</Link></span>
-        </p>
+        </motion.p>
       </div>
       <div className='w-2/4 h-[70vh] hidden md:inline-block p-auto'>
         <img src={hero} className='h-full w-4/5 flex self-center m-auto'/>
