@@ -142,7 +142,7 @@ const Contact = () => {
         initial='hidden'
         whileInView='visible'
         >
-          <p>Designed and Developed by Akay 2022</p>
+          <p>Designed and Developed by <span className='text-[#a1967a] cursor-pointer'><a href='https://github.com/Akay74'>Akay</a></span> © 2022</p>
         </motion.div>
       </div>
     </div>

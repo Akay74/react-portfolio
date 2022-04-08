@@ -104,7 +104,7 @@ const Projects = () => {
                 </a>
               </motion.div>
               <motion.div className='mt-16'>
-                <img src={image} className='h-48 w-full'/>
+                <img src={image} className='h-48 w-full self-end'/>
               </motion.div>
             </motion.div>
           ))}

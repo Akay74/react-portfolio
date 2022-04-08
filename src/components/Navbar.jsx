@@ -49,6 +49,19 @@ const iconVariantIII = {
   }
 }
 
+const mobileMenuVariant = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+    }
+  }
+
+}
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
@@ -63,27 +76,27 @@ const Navbar = () => {
       <motion.ul className='hidden md:flex tracking-wider'
       
       >
-        <motion.li>
+        <li className='hover:text-[#a1967a]'>
           <Link to='home' smooth={true} duration={500}>
             Home
           </Link>
-        </motion.li>
-        <li>
+        </li>
+        <li className='hover:text-[#a1967a]'>
           <Link to='about' smooth={true} duration={500}>
             About
           </Link>
         </li>
-        <li>
+        <li className='hover:text-[#a1967a]'>
           <Link to='resume' smooth={true} duration={500}>
             Resume
           </Link>
         </li>
-        <li>
+        <li className='hover:text-[#a1967a]'>
           <Link to='projects' smooth={true} duration={500}>
             Projects
           </Link>
         </li>
-        <li>
+        <li className='hover:text-[#a1967a]'>
           <Link to='contact' smooth={true} duration={500}>
             Contact
           </Link>
@@ -96,12 +109,15 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <ul
+      <motion.ul
         className={
           !nav
             ? 'hidden'
             : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
         }
+        variants={mobileMenuVariant}
+        initial='hidden'
+        whileInView='visible'
       >
         <li className='py-6 text-5xl'>
           <Link onClick={handleClick} to='home' smooth={true} duration={500}>
@@ -132,7 +148,7 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
-      </ul>
+      </motion.ul>
       
       {/* Social icons */}
       <div className='hidden lg:flex fixed flex-col top-[35%] left-3'>
