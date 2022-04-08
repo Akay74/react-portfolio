@@ -3,48 +3,47 @@ import React from 'react';
 import { motion, useSpring } from 'framer-motion';
 
 const titleVariant = {
-    hidden: {
-      opacity: 0,
-      y: 30
-    },
-    visible: {
-      opacity: 1, 
-      y: 0,
-      transition: {
-        type: 'tween',
-        duration: 0.5, 
-        delay: 0.2
-      }
+  hidden: {
+    opacity: 0,
+    y: 30
+  },
+  visible: {
+    opacity: 1, 
+    y: 0,
+    transition: {
+      type: 'tween',
+      duration: 0.5, 
+      delay: 0.2
     }
+  }
 }
 
 const subTitleVariant = {
-    hidden: {
-        y: -30
-    },
-    visible: {
-        y: 0,
-        transition: {
-            type: 'tween',
-            delay: 0.2,
-            duration: 0.5
-        }
+  hidden: {
+      opacity: 0,
+      y: -30
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+        type: 'tween',
+        delay: 0.3,
+        duration: 0.5
     }
+  }
 }
 
 const contentVariant = {
     hidden: {
-      opacity: 0,
-      y: -20
+      opacity: 0
     },
     visible: {
       opacity: 1,
-      y: 0,
       transition: {
         type: 'tween',
         duration: 0.7,
-        delay: 0.8,
-        staggerChildren: 0.5
+        delay: 0.3,
       }
     }
 }
@@ -65,20 +64,28 @@ const Resume = () => {
           </p>
         </motion.div>
 
-        <div>
+        <motion.div
+        variants={subTitleVariant}
+        initial="hidden"
+        whileInView="visible"
+        >
           <p className='text-lg md:text-2l mt-12'>
             Click the button below to download my resume
           </p>
-        </div>
+        </motion.div>
 
-        <div className='mt-12 border border-[#a1967a]/[0.6] bg-[#a1967a]/[0.6] w-48 text-center px-2 py-4 text-lg md:text-xl hover:bg-[#a1967a] hover:border-[#a1967a] cursor-pointer hover:text-[#fff]'>
-            <a
-              href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target='_blank'
-              download
-            >
-              Download Resume
-            </a>
-        </div>
+        <motion.div className='mt-12 border border-[#a1967a]/[0.6] bg-[#a1967a]/[0.6] w-48 text-center px-2 py-4 text-lg md:text-xl hover:bg-[#a1967a] hover:border-[#a1967a] cursor-pointer hover:text-[#fff]'
+        variants={contentVariant}
+        initial="hidden"
+        whileInView="visible"
+        >
+          <a
+            href="https://drive.google.com/file/d/1EX91Z2nNxjt5eC1H8j6HZv_CM6SGOPRG/view?usp=sharing" target='_blank'
+            download
+          >
+            Download Resume
+          </a>
+        </motion.div>
 
       </div>
     </div>
