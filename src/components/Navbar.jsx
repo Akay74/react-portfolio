@@ -64,7 +64,15 @@ const mobileMenuVariant = {
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const handleClick = () => setNav(!nav);
+  const handleClick = () => {
+    setNav(!nav)
+
+    if (typeof window != 'undefined' && window.document) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  };
 
   return (
     <div className='sticky top-0 w-full h-[100px] flex justify-between items-center px-8 bg-[#0a192f]/[0.9] text-gray-300 text-lg'>
@@ -113,7 +121,7 @@ const Navbar = () => {
         className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
+            : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center z-100'
         }
         variants={mobileMenuVariant}
         initial='hidden'
