@@ -137,13 +137,13 @@ const Contact = () => {
           </li>
         </ul>
 
-        <motion.div className='mt-8 text-[#c1e0db] md:text-lg text-center'
+        {/*<motion.div className='mt-8 text-[#c1e0db] md:text-lg text-center'
         variants={devVariant}
         initial='hidden'
         whileInView='visible'
         >
           <p>Designed and Developed by <span className='text-[#a1967a] cursor-pointer'><a href='https://github.com/Akay74' target='_blank'>Akay</a></span> © 2022</p>
-        </motion.div>
+        </motion.div>*/}
       </div>
     </div>
     

@@ -45,7 +45,7 @@ const About = () => {
           whileInView="visible"
           >
             <p className='text-4xl md:text-6xl font-bold inline border-b-4 border-pink-600 text-transparent bg-gradient-to-r from-yellow-100 to-cyan-600 bg-clip-text'>
-              About
+              About Me
             </p>
           </motion.div>
           </div>

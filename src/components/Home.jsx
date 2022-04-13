@@ -120,7 +120,7 @@ const Home = () => {
         initial="hidden"
         animate="visible"
         >
-          You can check out my some of my
+          You can check out some of my
           <span className='text-[#a1967a] cursor-pointer'>
             <Link to='projects' smooth={true} duration={500} className=''> projects </Link>
           </span>
